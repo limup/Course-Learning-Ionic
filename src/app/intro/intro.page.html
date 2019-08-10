@@ -1,0 +1,64 @@
+<ion-content padding>
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide class="slide-image">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <img src="assets/images/slide-1.png" alt="">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <h2>Slide 1</h2>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <h2 style="text-align: center">Meu app Fantástico</h2>
+            <br>
+            <p>
+              Este meu app terá funções incríveis. Ele foi feito para impressionar você.
+            </p>
+            <p>
+              Tipo chamada 1 <strong><a href="/tabs/tab1">  Veja mais </a></strong>
+            </p>
+            <p>
+              Tipo chamada 2 <strong><a (click)="go1()"> Veja mais </a></strong>
+            </p>
+            <p>
+              Tipo chamada 3 <strong><a href="/souParametroGet"> Veja mais </a></strong>
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide class="slide-image">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <img src="assets/images/slide-2.png" alt="">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <h2>Slide 2</h2>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide class="slide-image">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <img src="assets/images/slide-3.png" alt="">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <h2>Slide 3</h2>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

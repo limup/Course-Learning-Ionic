@@ -38,14 +38,24 @@ const routes: Routes = [
         ]
       },
       {
-        path: '',
+        path: 'feed',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../feed/feed.module').then(m => m.FeedPageModule)
+          }
+        ]
+      },
+      {
+        path: 'tabs',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
       }
     ]
   },
   {
-    path: '',
+    path: 'tabs',
     redirectTo: '/tabs/tab1',
     pathMatch: 'full'
   }
