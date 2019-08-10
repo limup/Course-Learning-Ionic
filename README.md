@@ -13,6 +13,11 @@ Content:
         - profile component
             - HTML Page show id parameters
 
+After download:
+
+    - Run
+        npm install
+
 # Limup
 
 https://limup.com.br
