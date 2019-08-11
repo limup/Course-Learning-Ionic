@@ -7,46 +7,51 @@
 <ion-content>
 
 
-  <ion-card>
-      <img src="assets/images/madison.jpg" />
-    <ion-card-header>
-      <ion-card-subtitle>{{ Autor }}</ion-card-subtitle>
-      <ion-card-title class="feed-title">{{ Titulo }}</ion-card-title>
-      <ion-card-subtitle class="feed-corporation">{{ Corporation }}</ion-card-subtitle> 
-    </ion-card-header>
-
-    <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile,
-      and climb a mountain or spend a week in the woods. Wash your spirit clean.
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
+  <ion-card *ngFor="let feed of json.feeds"> 
+    <img src="{{ feed.background }}" />
     <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>ion-item in a card, icon left, button right</ion-label>
-      <ion-button fill="outline" slot="end">View</ion-button>
+      <ion-avatar slot="start">
+        <img src="{{ feed.avatar }}">
+      </ion-avatar>
+      <ion-label>{{ feed.autor }}</ion-label>
     </ion-item>
-
-    <ion-card-content>
-      This is content, without any paragraph or header tags,
-      within an ion-card-content element.
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-      <img src="assets/images/madison.jpg" />
     <ion-card-header>
-      <ion-card-subtitle>{{ Autor }}</ion-card-subtitle>
-      <ion-card-title class="feed-title">{{ Titulo }}</ion-card-title>
-      <ion-card-subtitle class="feed-corporation">{{ Corporation }}</ion-card-subtitle>
+      <ion-card-title class="feed-title">{{ feed.titulo }}</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile,
-      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      {{ feed.texto }}
     </ion-card-content>
+
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+
+          <ion-col center text-center>
+            <div>
+              <ion-icon name="thumbs-up" color="secondary"></ion-icon>
+            </div>
+          </ion-col>
+
+          <ion-col center text-center>
+            <div>
+              <ion-icon name="text" color="secondary"></ion-icon>
+            </div>
+          </ion-col>
+
+          <ion-col center text-center>
+            <ion-note>
+              {{ feed.tempo }}
+            </ion-note>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+    </ion-item>
   </ion-card>
+
+
+  <!-- BOTTOM START -->
 
   <ion-card>
     <ion-item href="#" class="activated">
@@ -68,5 +73,5 @@
       <ion-icon name="walk" slot="start"></ion-icon>
       <ion-label>Card Button Item 2</ion-label>
     </ion-item>
-  </ion-card> 
+  </ion-card>
 </ion-content>
