@@ -11,7 +11,7 @@ export class FeedPage implements OnInit {
   public Autor:any = "Limup TI";
   public Corporation:string = "Limup Corp.";
    
-  public json = {
+  public json = { 
     feeds:[
       {
         background: "/assets/images/madison.jpg",
