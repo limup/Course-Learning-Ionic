@@ -7,9 +7,17 @@ This code was the basic for my App Bella.
 Content:
 
     - feed page
+        - Using template for the component card ionic
     - intro page
-        - profile page
+        - Using template for the slides ionic
+        - profile component
+            - HTML Page show id parameters
+
+After download:
+
+    - Run
+        npm install
 
 # Limup
 
-limup.com.br
+https://limup.com.br
