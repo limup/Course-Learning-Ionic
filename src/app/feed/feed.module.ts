@@ -21,6 +21,8 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [FeedPage]
+  declarations: [
+    FeedPage
+  ]
 })
 export class FeedPageModule {}

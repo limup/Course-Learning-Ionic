@@ -11,11 +11,20 @@ import { AppComponent } from './app.component';
 import { FeedPageModule } from './feed/feed.module';
 import { IntroPageModule } from './intro/intro.module';
 import { TabsPageModule } from './tabs/tabs.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FeedPageModule, IntroPageModule, TabsPageModule],
+  imports: [
+    BrowserModule, 
+    IonicModule.forRoot(), 
+    AppRoutingModule, 
+    FeedPageModule, 
+    IntroPageModule, 
+    TabsPageModule,
+    HttpClientModule
+  ],
   providers: [
     StatusBar,
     SplashScreen,

@@ -1,12 +1,18 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Feed</ion-title>
+    <ion-title center>Feed</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-card *ngFor="let feed of json.feeds"> 
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="feed-title">Feed Item Consuming API via Archive</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card *ngFor="let feed of json.feeds">
     <img src="{{ feed.background }}" />
     <ion-item>
       <ion-avatar slot="start">
@@ -49,6 +55,54 @@
     </ion-item>
   </ion-card>
 
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title class="feed-title">Feed Item Consuming API The Movie Database</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+  <ion-card *ngFor="let movie of listar_filmes">
+    <img src="https://image.tmdb.org/t/p/w300/{{ movie.backdrop_path }}" />
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://image.tmdb.org/t/p/w300/{{ movie.poster_path }}">
+      </ion-avatar>
+      <ion-label>{{ movie.title }}</ion-label>
+    </ion-item>
+    <ion-card-header>
+      <ion-card-title class="feed-title">{{ movie.original_title }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{ movie.overview }}
+    </ion-card-content>
+
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+
+          <ion-col center text-center>
+            <div>
+              <ion-icon name="thumbs-up" color="secondary"></ion-icon>
+            </div>
+          </ion-col>
+
+          <ion-col center text-center>
+            <div>
+              <ion-icon name="text" color="secondary"></ion-icon>
+            </div>
+          </ion-col>
+
+          <ion-col center text-center>
+            <ion-note>
+              {{ movie.release_date }}
+            </ion-note>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-card>
 
   <!-- BOTTOM START -->
 
