@@ -13,6 +13,8 @@ Content:
         - Using template for the slides ionic
         - profile component
             - HTML Page show id parameters
+    - Local Storage
+        - Use local storage as "config" for refresh app and directive to tabs or intro (on first use)
 
 After download:
 

@@ -12,6 +12,7 @@ import { FeedPageModule } from './feed/feed.module';
 import { IntroPageModule } from './intro/intro.module';
 import { TabsPageModule } from './tabs/tabs.module';
 import { HttpClientModule } from '@angular/common/http';
+import { configService } from './local_storage/config/config';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [
     StatusBar,
     SplashScreen,
+    configService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
